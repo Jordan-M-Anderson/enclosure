@@ -45,7 +45,7 @@ void loop() {
   int maxTemp = 40; 
   
   // assigns temp to the input from dht
-  temp = dht.convertCtoF(dht.readTemperature());
+  temp = dht.readTemperature();
 
   // creates a corresponding value from the temp to the speed of the motor
   powerValue = map(temp, minStartTemp, maxTemp, 100, 255);
